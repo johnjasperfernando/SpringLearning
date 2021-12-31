@@ -1,0 +1,15 @@
+package com.luv2code.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SwinJavaConfigDemoApp {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext(SportConfig.class);
+		Coach theCoach=context.getBean("SwimCoach",Coach.class);
+		System.out.println(theCoach.getDailyWorkkout());
+		System.out.println(theCoach.getDailyFortune());
+		context.close();
+	}
+
+}

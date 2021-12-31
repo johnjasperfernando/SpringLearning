@@ -1,0 +1,13 @@
+package com.springdemo;
+
+public class HappyFortuneService implements FortuneService {
+
+	@Override
+	public String getFortune() {
+		
+		String Fortune[]=new String[2];
+		
+		return "Today is your lucky day";
+	}
+
+}

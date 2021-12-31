@@ -1,0 +1,115 @@
+package com.jasperLearning;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JCheckBox;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+
+public class SwingBasics {
+
+	private JFrame frame;
+	private JTextField textField;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SwingBasics window = new SwingBasics();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public SwingBasics() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(96, 22, 114, 19);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel label = new JLabel("New label");
+		label.setBounds(12, 66, 70, 15);
+		frame.getContentPane().add(label);
+		
+		JButton btnNewButton = new JButton("Say Hi");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				label.setText("Hi "+ textField.getText());				
+			}
+		});
+		btnNewButton.setBounds(233, 19, 117, 25);
+		frame.getContentPane().add(btnNewButton);
+		
+		JLabel lblName = new JLabel("Name");
+		lblName.setBounds(12, 24, 70, 15);
+		frame.getContentPane().add(lblName);
+		
+		JLabel off = new JLabel("Off");
+		off.setBounds(32, 124, 70, 15);
+		frame.getContentPane().add(off);
+		
+		JCheckBox checkBox = new JCheckBox("Toggle On/Off");
+		checkBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String text=(checkBox.isSelected()) ?"On" : "off";
+				off.setText(text);
+				
+			}
+		});
+		checkBox.setBounds(22, 77, 129, 23);
+		frame.getContentPane().add(checkBox);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("New radio button");
+		buttonGroup.add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.setBounds(32, 124, 149, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("New radio button");
+		buttonGroup.add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton_1.setBounds(32, 168, 149, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("New radio button");
+		buttonGroup.add(rdbtnNewRadioButton_2);
+		rdbtnNewRadioButton_2.setBounds(32, 199, 149, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_2);
+		
+		
+		
+		
+	}
+}

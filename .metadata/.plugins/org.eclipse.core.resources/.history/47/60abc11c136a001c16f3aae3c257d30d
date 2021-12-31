@@ -1,0 +1,6 @@
+<!Doctype html>
+<html>
+<body>
+	Student name:${param.studentname}
+</body>
+</html>

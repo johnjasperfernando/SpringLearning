@@ -1,0 +1,32 @@
+package com.luv2code.springdemo.mvc;
+
+import javax.servlet.http.HttpServlet;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloWorldController {
+	
+	@RequestMapping("/showForm")
+	public String showForm() {
+		return "helloWorld";
+	}
+	
+	@RequestMapping("/processForm")
+	public String processForm() {
+		return "helloWorld-Form";
+	}
+	
+	@RequestMapping("/processFormVersion2")
+	public String letsShoutDude(HttpServlet request, Model model)
+	{
+		String theName= request.getInitParameter("studentName");
+		theName=theName.toUpperCase();
+		String result="Yo! "+theName;
+		model.addAttribute();)
+		return "helloWorld";
+	}
+
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+ 	<form action ="add">
+ 		Enter 1st number : <input type="text" name="numb1"><br>
+ 		Enter 2nd number : <input type="text" name="numb2"><br>
+ 		<input type="submit">
+ 	</form>
+</body>
+</html>

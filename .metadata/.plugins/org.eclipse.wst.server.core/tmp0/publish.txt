@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Dec 31 15:59:34 IST 2021
+org.eclipse.jst.jee.server\:/binary\:/home/jasper/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/lib/spring-web-5.0.2.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.0.2.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:/home/jasper/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar=WEB-INF/lib/spring-web-5.0.2.RELEASE.jar
